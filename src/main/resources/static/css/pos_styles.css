@@ -1,0 +1,68 @@
+:root {
+    --pos-accent: #0d6efd;
+    --pos-muted: #6c757d;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.pos-wrapper {
+    display: grid;
+    grid-template-columns: 1.8fr 1.3fr 0.9fr; 
+    gap: 1rem;
+}
+
+
+@media (max-width: 1200px) {
+    .pos-wrapper {
+        grid-template-columns: 1fr
+    }
+}
+
+.product-card {
+    transition: transform .1s ease, box-shadow .1s ease;
+    cursor: pointer
+}
+
+.product-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .08)
+}
+
+.kbd {
+    border: 1px solid var(--pos-muted);
+    border-bottom-width: 2px;
+    border-radius: .35rem;
+    padding: .05rem .35rem;
+    font-size: .85rem
+}
+
+.cart-table tbody tr {
+    --bs-table-bg: var(--bs-body-bg)
+}
+
+.sticky-col {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.totals-card .list-group-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.search-scan input {
+    font-size: 1.05rem
+}
+
+.badge-qty {
+    min-width: 1.8rem
+}
+
+.btn-ghost {
+    background: transparent;
+    border: 0
+}
